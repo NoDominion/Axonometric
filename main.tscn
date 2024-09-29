@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://VertexTransformer.gd" id="2_31iwh"]
 [ext_resource type="Script" path="res://PolygonRenderer.gd" id="2_gmkri"]
 [ext_resource type="Script" path="res://mesh_renderer.gd" id="3_om0io"]
-[ext_resource type="ArrayMesh" uid="uid://cny5lsh66lb7i" path="res://monkey.res" id="4_w03vg"]
+[ext_resource type="ArrayMesh" uid="uid://bd2l8b10wyqyv" path="res://orienter.res" id="4_hlqc7"]
 
 [node name="Main" type="Node2D"]
 
@@ -25,4 +25,5 @@ script = ExtResource("2_31iwh")
 
 [node name="MeshRenderer" type="Node2D" parent="."]
 script = ExtResource("3_om0io")
-mesh = ExtResource("4_w03vg")
+inclination = 0.001
+mesh = ExtResource("4_hlqc7")

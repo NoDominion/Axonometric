@@ -55,6 +55,9 @@ var base_scale: Vector3
 		queue_redraw()
 		mesh = value
 
+func _ready() -> void:
+	base_scale = base_scale_ratio(inclination)
+	queue_redraw()
 
 func get_transformed_vertices() -> PackedVector3Array:
 	return transform_vertices(mesh.get_faces())
