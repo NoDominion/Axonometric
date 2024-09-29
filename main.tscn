@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmlpeynhr6cv6"]
+
+[ext_resource type="Script" path="res://VertexTransformer.gd" id="2_31iwh"]
+[ext_resource type="Script" path="res://PolygonRenderer.gd" id="2_gmkri"]
+[ext_resource type="Script" path="res://mesh_renderer.gd" id="3_om0io"]
+[ext_resource type="ArrayMesh" uid="uid://cny5lsh66lb7i" path="res://monkey.res" id="4_w03vg"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PolygonRenderer" type="Node2D" parent="."]
+visible = false
+script = ExtResource("2_gmkri")
+
+[node name="Square" type="Polygon2D" parent="PolygonRenderer"]
+visible = false
+polygon = PackedVector2Array(1, 1, 1, -1, -1, -1, -1, 1)
+script = ExtResource("2_31iwh")
+
+[node name="Star" type="Polygon2D" parent="PolygonRenderer"]
+visible = false
+polygon = PackedVector2Array(1, 0, 0.4, 0.29, 0.31, 0.95, -0.15, 0.48, -0.81, 0.59, -0.5, 0, -0.81, -0.59, -0.15, -0.48, 0.31, -0.95, 0.4, -0.29)
+script = ExtResource("2_31iwh")
+
+[node name="MeshRenderer" type="Node2D" parent="."]
+script = ExtResource("3_om0io")
+mesh = ExtResource("4_w03vg")

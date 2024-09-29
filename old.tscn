@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmftmeg2xa06t"]
+
+[ext_resource type="Script" path="res://CubeRenderer.gd" id="1_12s6g"]
+[ext_resource type="Script" path="res://BetterCubeRenderer.gd" id="4_ftbch"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CubeRenderer" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_12s6g")
+base_scale = 64.0
+base_colour = Color(0, 1, 0.74902, 1)
+
+[node name="BetterCubeRenderer" type="Node2D" parent="."]
+script = ExtResource("4_ftbch")
+base_scale = 64.0
+base_colour = Color(1, 0, 0, 1)
